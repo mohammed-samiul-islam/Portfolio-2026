@@ -1,16 +1,49 @@
-# React + Vite
+# Portfolio 2026 – Mohammed Samiul Islam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal developer portfolio site built with React, Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Single-page layout with Navbar, Hero, About, Projects, Experience, Contact and Footer sections
+- Projects section linking to live demos and GitHub repos (PetSoft, Evento, rmtDev, and more)
+- Contact form that submits to the [Web3Forms](https://web3forms.com) API
+- Icons via `lucide-react`
+- (A Testimonials section exists but is currently disabled in `App.jsx`.)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React · Vite · Tailwind CSS (v4, `@tailwindcss/vite`) · lucide-react · ESLint
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+  App.jsx            # page composition
+  layout/            # Navbar, Footer
+  sections/          # Hero, About, Projects, Experience, Testimonials, Contact
+  components/        # Button, AnimatedBorderButton
+index.html
+vite.config.js
+```
+
+## Getting Started
+
+```bash
+npm install
+npm run dev       # start dev server
+npm run build     # production build to dist/
+npm run preview   # preview the build
+npm run lint
+```
+
+### Environment Variables
+
+| Name | Purpose |
+|------|---------|
+| `VITE_WEB3FORMS_ACCESS_KEY` | Web3Forms access key for the contact form |
+
+Create a `.env` file with this variable (do not commit it).
+
+## License
+
+See [LICENSE](LICENSE).
